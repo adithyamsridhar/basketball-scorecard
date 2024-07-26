@@ -1,6 +1,7 @@
 let homeScore = document.getElementById("home-score")
 let awayScore = document.getElementById("away-score")
 let timerCD = document.getElementById("timerCD")
+let timeLeft = document.getElementById("time-left")
 
 function incHomebyOne() {
     let homeScoreV = parseFloat(homeScore.innerText)
@@ -42,9 +43,12 @@ function checkTopper() {
     if(homeScore.textContent>awayScore.textContent) {
         document.getElementById("home-team").style.backgroundColor="#66b2b2"
         document.getElementById("away-team").style.backgroundColor="#1B244A"
-    } else {
+    } else if (awayScore.textContent>homeScore.textContent){
         document.getElementById("away-team").style.backgroundColor="#66b2b2"
         document.getElementById("home-team").style.backgroundColor="#1B244A"    
+    } else {
+        document.getElementById("away-team").style.backgroundColor="#1B244A"
+        document.getElementById("home-team").style.backgroundColor="#1B244A"     
     }
 }
 
@@ -65,6 +69,7 @@ function startTimer(duration) {
         timerCD.textContent = minutes + ":" + seconds
         
         if (--timer < 0) {
+            timeLeft.textContent = ""
             timerCD.textContent = "GAME OVER"
         }
     }, 1000);
