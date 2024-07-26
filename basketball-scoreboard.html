@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <br><br><br>
+    <body style="background-color: #1B244A;">
+        <div class="container">
+            <table>
+                <tr>
+                    <th align="center" colspan="3"><font size=50 color="white" id="home-team">HOME TEAM</font></th>
+                    <th>&nbsp;</th>
+                    <th align="center" colspan="3"><font size=50 color="white" id="away-team">GUEST TEAM</font></th>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr>
+                    <td align="center" colspan="3" height=100 width=100><font size=200 color="white" id="home-score">0</font></td>
+                    <th>&nbsp;</th>
+                    <td align="center" colspan="3" height=100 width=100><font size=200 color="white" id="away-score">0</font></td>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr>
+                    <td align="center"><img src="+1.svg" alt="" border=1 height=40 width=40 onclick="incHomebyOne()"></img></td>
+                    <td align="center"><img src="+2.svg" alt="" border=1 height=40 width=40 onclick="incHomebyTwo()"></img></td>
+                    <td align="center"><img src="+3.svg" alt="" border=1 height=40 width=40 onclick="incHomebyThree()"></img></td>
+                    <td align="center" height=40 width=40>&nbsp;</td>
+
+                    <td align="center"><img src="+1.svg" alt="" border=1 height=40 width=40 onclick="incAwaybyOne()"></img></td>
+                    <td align="center"><img src="+2.svg" alt="" border=1 height=40 width=40 onclick="incAwaybyTwo()"></img></td>
+                    <td align="center"><img src="+3.svg" alt="" border=1 height=40 width=40 onclick="incAwaybyThree()"></img></td>
+                    <td align="center" height=40 width=40>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <p align="center" style="font-size:25px; color:grey"></font>TIME LEFT</p>
+        <p align="center" id="timerCD" style="font-size:25px; color:grey"></font></p>
+        <script src="index.js"></script>
+    </body>
+</html>
